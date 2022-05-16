@@ -1,0 +1,114 @@
+
+@mixin bgcolor {
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
+}
+
+body{
+    background-color: #212a57;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  }
+  
+  h1,
+  h2,
+  h3 {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  p {
+    padding: 0 20px 20px;
+    margin: 0;
+  }
+  
+  ul {
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  header {
+    @include bgcolor();
+  }
+  
+  .main,
+  .personal,
+  .showcases {
+    display: grid;
+    grid-gap: 10px;
+  }
+
+  .main {
+    @include bgcolor();
+  }
+  
+  .contact{
+    @include bgcolor();
+  }
+  
+  .contact__li{
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .social__logo{
+    width: 2%;
+    height: 2%;
+    min-width: 20px;
+  }
+  
+  .showcases__item,
+  .git__form {
+    height: 200px;
+  }
+  
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
+  .showcase__item__image{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contact__form-content {
+    padding: 20px;
+  }
+  
+  .footer {
+    @include bgcolor();
+    display: grid;
+    justify-content: center;    
+  }
+  
+  @media only screen and (min-width: 820px) {
+    .personal {
+      grid-template-columns: 60% auto;
+    }
+  
+    .personal__title,
+    .personal__experience {
+      grid-column: 1 / span 2;
+    }
+    
+    .showcases {
+      grid-template-columns: repeat(3, minmax(10px, 1fr));
+    }
+    
+    .showcases__title {
+      grid-column: 1 / span 3;
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
